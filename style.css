@@ -1,0 +1,59 @@
+
+#feedbackScreen {
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	background-color: rgba(0, 0, 0, .7);
+	z-index: 10;
+	display: none;
+}
+
+#feedbackBg {
+	color: #fff;
+	background-color: #0c0a0a;
+	padding: auto;
+	width: 500px;
+	height: 500px;
+	margin: auto;
+	border-radius: 20px;
+	box-shadow: inset 2px 2px 13px rgba(255, 255, 255, 1), 3px 3px 6px 1px #000;
+}
+
+#feedbackBg h3 {
+	text-align: center;
+}
+
+#feedbackForm{
+	margin: auto;
+	width: 340px;
+	display: block;
+}
+
+#buttonEscape {
+	color: #fff;
+	float: right;
+	background-color: #0c0a0a;
+	margin-top: 10px;
+	margin-right: 10px;
+	border-radius: 100%;
+	/*box-shadow: 2px 2px 1px 0px  rgba(255, 255, 255, 1), inset 0 0 0 #fff;*/
+}
+
+#buttonFeedback {
+	text-align: center;
+}
+
+#feedbackSuggest {
+	color: #fff;
+	float: right;
+	margin-right: 100px;
+	background-color: #0c0a0a;
+	width: 100px;
+	text-align: center;
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+	font-size: 15pt;
+	padding: 15px, 5px, 15px, 5px;
+}
