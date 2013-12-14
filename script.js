@@ -6,6 +6,7 @@ $(window).scroll(function () {
 
 function openFeedback(){
 	document.getElementById("feedbackScreen").style.display = "block";
+	document.getElementById("feedbackBg").style.height = "500px";
 }
 
 function closeFeedback(){
