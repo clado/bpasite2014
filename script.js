@@ -6,7 +6,10 @@ $(window).scroll(function () {
 
 function openFeedback(){
 	document.getElementById("feedbackScreen").style.display = "block";
-	document.getElementById("feedbackBg").style.height = "500px";
+	setTimeout(function(){
+		document.getElementById("feedbackBg").style.height = "500px";
+		document.getElementById("feedbackBg").style.width = "500px";
+	}, 100);
 }
 
 function closeFeedback(){
