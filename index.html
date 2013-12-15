@@ -1,8 +1,8 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<!-- for when I am back online <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> -->
-	<script type="text/javascript" src="jquery.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<!-- If I am ever again offline <script type="text/javascript" src="jquery.min.js"></script> -->
 	<script type="text/javascript" src="script.js"></script>
 	<!--<link rel="icon" href="IndianaFlagIcon.ico" type="image/x-icon"/>-->
 	<!--<link rel="shortcut icon" href="IndianaFlagIcon.ico" type="image/x-icon"/>-->
@@ -52,9 +52,20 @@
 		</div>
 	</div>
 
-	<div id="feedbackSuggest">
-		<a onclick="openFeedback()">Feedback</a>
+	<div id="aboutSuggest" onclick="openAbout()">
+		About Us
 	</div>
+
+	<div id="aboutUs"><!--name of chapter, team member names, theme, school, city, state, and year-->
+		<p> "Go Green" is cliche, so we used 500nm instead (a wavelength of green light).</p>
+		<p>Wayzata High School BPA Chapter, Wayzata High School, Plymouth, Minnesota, &copy;2013-2014 <!-- add this someplace else as well --> </p>
+		<!-- Add more later -->
+		<p>Katrina Kerrick: coding<!--, content--></p>
+		<p>Isabel Milano: <!--design, content--></p>
+		<p>Annelies Odermann: coding, page layout, compatibility<!--, content--></p>
+	</div>
+
+	<div id="feedbackSuggest" onclick="openFeedback()">Feedback</div>
 
 	<script>
 	screenLoad()
