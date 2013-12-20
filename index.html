@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta charset="UTF-8">
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 	<!-- If I am ever again offline <script type="text/javascript" src="jquery.min.js"></script> -->
 	<script type="text/javascript" src="script.js"></script>
@@ -39,7 +40,7 @@
 			<div id="feedbackForm">
 				<h3>Feedback</h3>
 				<p>We love getting feedback about our work! Fill out the form below, click submit, and your comments shall be sent directly to us. If you'd like to receive a reply, please post your contact information in the body of your message.</p>
-				<form method="post" name="giveFeedback" action="" enctype="multipart/form-data"><br />
+				<form method="post" name="giveFeedback" action="doesnothing.php" enctype="multipart/form-data"><br />
   					Your Name: <input name="name" type="text" size="25" /><br />
   					Subject: <input name="subject" type="text" size="45" /><br />
   					Message:<br />
@@ -52,17 +53,23 @@
 		</div>
 	</div>
 
-	<div id="aboutSuggest" onclick="openAbout()">
-		About Us
-	</div>
+	<div id="aboutSuggest" onclick="openAbout()"> About Us </div>
+
+	<div id="sourcesSuggest" onclick="openSources()"> Sources </div>
 
 	<div id="aboutUs"><!--name of chapter, team member names, theme, school, city, state, and year-->
-		<p> "Go Green" is cliche, so we used 500nm instead (a wavelength of green light).</p>
+		<p>"Go Green" is cliche, so we used 500nm instead (a wavelength of green light).</p>
 		<p>Wayzata High School BPA Chapter, Wayzata High School, Plymouth, Minnesota, &copy;2013-2014 <!-- add this someplace else as well --> </p>
 		<!-- Add more later -->
 		<p>Katrina Kerrick: coding<!--, content--></p>
-		<p>Isabel Milano: <!--design, content--></p>
-		<p>Annelies Odermann: coding, page layout, compatibility<!--, content--></p>
+		<p>Isabel Milano: color, art, design<!--design, content--></p>
+		<p>Annelies Odermann: coding, page layout, <!--, compatability, content--></p>
+	</div>
+
+	<div id="sources">
+		<p>Sources:</p> <!-- This is where we list our sources, for any images we used -->
+		<p></p>
+		<p>All other images on this website were created by Isabel Milano</p>
 	</div>
 
 	<div id="feedbackSuggest" onclick="openFeedback()">Feedback</div>
