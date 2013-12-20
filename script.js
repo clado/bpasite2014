@@ -1,4 +1,6 @@
 
+//to be run when the screen is loaded
+//Ensures that the feedback box appears in the middle of the page
 function screenLoad(){
 	height = $(window).height();
 	width = $(window).width();
@@ -7,11 +9,23 @@ function screenLoad(){
 }
 
 
+//runs on window scroll. For moving things about the page
 $(window).scroll(function () { 
 	if (($(window).scrollTop() + height) > ($(document).height() - 25)) document.getElementById('feedbackSuggest').style.height = '30px'; 
 	else document.getElementById('feedbackSuggest').style.height = '0px';
 }); 
 
+//opens the about information at the bottom of the page, triggered by tab at the bottom of the page
+function openAbout(){
+	
+}
+
+//opens the source information at the bottom of the page, triggered by tab at the bottom of the page
+function openSources(){
+	
+}
+
+//opens feedback form, triggered by popup at bottom
 function openFeedback(){
 	document.getElementById('feedbackScreen').style.display = 'block';
 	setTimeout(function(){
@@ -21,6 +35,7 @@ function openFeedback(){
 	}, 100);
 }
 
+//closes feedback form, triggered by 'x' button
 function closeFeedback(){
 	document.getElementById('feedbackScreen').style.display = 'none';
 	document.getElementById('feedbackBg').style.height = '0px';
@@ -28,6 +43,7 @@ function closeFeedback(){
 	document.getElementById('feedbackBg').style.margin = (height / 2) + 'px ' + (width / 2) + 'px';
 }
 
+//validates the form and notifies user of error before sending feedback
 function sendMessage(){
 	var name = document.getElementsByName('name')[0].value;
 	var subject = document.getElementsByName('subject')[0].value;
