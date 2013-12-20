@@ -15,14 +15,30 @@ $(window).scroll(function () {
 	else document.getElementById('feedbackSuggest').style.height = '0px';
 }); 
 
-//opens the about information at the bottom of the page, triggered by tab at the bottom of the page
-function openAbout(){
-	
+//opens section at the bottom of the page, triggered by tab at the bottom of the page
+function openClose(current, other){
+	//if the selected element is already opened, it should be closed
+	if (document.getElementById(current).style.height == 'auto') {
+		close(current);
+	}
+	//if another element is already open, this element must wait while it is 
+	else if (document.getElementById(other).style.height != '0px') {
+		document.getElementById(other).style.height = '0px';
+		setTimeout(autoHeight(current), 8000); //change time to match transition time
+	}
+	else {
+		autoHeight(current);
+	}
 }
 
-//opens the source information at the bottom of the page, triggered by tab at the bottom of the page
-function openSources(){
-	
+//sets the element's height to zero
+function close(element){
+	document.getElementById().style.height = '0px';
+}
+
+//sets the element's height to auto
+function autoHeight(element){
+	document.getElementById(element).style.height = 'auto';
 }
 
 //opens feedback form, triggered by popup at bottom
