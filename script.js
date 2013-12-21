@@ -1,48 +1,34 @@
-
-//to be run when the screen is loaded
-//Ensures that the feedback box appears in the middle of the page
-function screenLoad(){
-	height = $(window).height();
-	width = $(window).width();
-	//needs fixing
-	document.getElementById('feedbackBg').style.margin = (height / 2) + 'px ' + (width / 2) + 'px';
-}
-
-
 //runs on window scroll. For moving things about the page
 $(window).scroll(function () { 
-	if (($(window).scrollTop() + height) > ($(document).height() - 25)) document.getElementById('feedbackSuggest').style.height = '30px'; 
+	if (($(window).scrollTop() + $(window).height()) > ($(document).height() - 25)) document.getElementById('feedbackSuggest').style.height = '30px'; 
 	else document.getElementById('feedbackSuggest').style.height = '0px';
 }); 
 
 //opens section at the bottom of the page, triggered by tab at the bottom of the page
 function openClose(current, other){
-	//if the selected element is already opened, it should be closed
-	if (document.getElementById(current).style.height != '0px') {
-		close(current);
+	//if the tab is already opened
+	if (document.getElementById('bottomTab').style.height == '300px'){
+		//either the element's visibilities must be switched
+		if (document.getElementById(other).style.display != 'none'){
+			document.getElementById(other).style.display = 'none';
+			document.getElementById(current).style.display = 'block';
+		}
+		//or the user wants to close the tab
+		else {
+			document.getElementById(current).style.display = 'none';
+			document.getElementById('bottomTab').style.height = '0px';
+		}
 	}
-	//if another element is already open, this element must wait while it is closed
-	else if (document.getElementById(other).style.height != '0px') {
-		document.getElementById(other).style.height = '0px';
-		setTimeout(autoHeight(current), 20000); //change time to match transition time
-	}
+	//otherwise, the user is opening the tab for the first time
 	else {
-		autoHeight(current);
+		document.getElementById('bottomTab').style.height = '300px';
+		document.getElementById(current).style.display = 'block';
 	}
-}
-
-//sets the element's height to zero
-function close(element){
-	document.getElementById(element).style.height = '0px';
-}
-
-//sets the element's height to auto
-function autoHeight(element){
-	document.getElementById(element).style.height = '300px';
 }
 
 //opens feedback form, triggered by popup at bottom
 function openFeedback(){
+	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
 	document.getElementById('feedbackScreen').style.display = 'block';
 	setTimeout(function(){
 		document.getElementById('feedbackBg').style.height = '500px';

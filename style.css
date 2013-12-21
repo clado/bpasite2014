@@ -1,5 +1,5 @@
 body {
-	cursor: default; /* Remove feddbackSuggest, then */
+	cursor: default; /* Manually change pointer over links then, I think */
 	padding: 0px;
 	margin: 0px;
 }
@@ -57,6 +57,7 @@ footer {
 }
 
 .tabSuggest {
+	margin: 10px -5px 0px 20px;
 	padding: 10px;
 	border-radius: 5px;
 	background-color: #fff;
@@ -65,7 +66,7 @@ footer {
 
 }
 
-.bottomTab {
+#bottomTab {
 	background-color: #fff;
 	height: 0px;
 	overflow: hidden;
@@ -73,15 +74,17 @@ footer {
 	transition: height 2s;
 }
 
+#aboutUs, #sources {
+	display: none;
+}
+
 #badges {
 	padding: 0px;
 	width: 164px;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 5px auto 0px auto;
 }
 
 #feedbackSuggest {
-	cursor: default; /* remove body, then */
 	position: fixed;
 	height: 0px;
 	overflow: hidden;

@@ -58,20 +58,22 @@
 		<div id="aboutSuggest" class="tabSuggest" onclick="openClose('aboutUs', 'sources')"> About Us </div>
 		<div id="sourcesSuggest" class="tabSuggest" onclick="openClose('sources', 'aboutUs')"> Sources </div>
 
-		<div id="aboutUs" class="bottomTab" ><!--name of chapter, team member names, theme, school, city, state, and year-->
-			<p>"Go Green" is cliche, so we used 500nm instead (a wavelength of green light).</p>
-			<p>Please note that the errors in our html5 validation are due to the code that the hosting service uses to enforce its traffic caps. It is neither something we wrote, nor is it something we can change.</p>
-			<p>Wayzata High School BPA Chapter, Wayzata High School, Plymouth, Minnesota, &copy;2013-2014 <!-- add this someplace else as well --> </p>
-			<!-- Add more later -->
-			<p>Katrina Kerrick: coding <!--, content--></p>
-			<p>Isabel Milano: color, art, design<!--design, content--></p>
-			<p>Annelies Odermann: coding, page layout, <!--, compatability, content--></p>
-		</div>
+		<div id="bottomTab">
+			<div id="aboutUs"><!--name of chapter, team member names, theme, school, city, state, and year-->
+				<p>"Go Green" is cliche, so we used 500nm instead (a wavelength of green light).</p>
+				<p>Please note that the errors in our html5 validation are due to the code that the hosting service uses to enforce its traffic caps. It is neither something we wrote, nor is it something we can change.</p>
+				<p>Wayzata High School BPA Chapter, Wayzata High School, Plymouth, Minnesota, &copy;2013-2014 <!-- add this someplace else as well --> </p>
+				<!-- Add more later -->
+				<p>Katrina Kerrick: coding <!--, content--></p>
+				<p>Isabel Milano: color, art, design<!--design, content--></p>
+				<p>Annelies Odermann: coding, page layout, <!--, compatability, content--></p>
+			</div>
 
-		<div id="sources" class="bottomTab">
-			<p>Sources:</p> <!-- This is where we list our sources, for any images we used -->
-			<p>W3C validated badges: http://hestia.venturas.org/badges, licensed under CC Share Alike 3.0</p>
-			<p>All other images on this website were created by Isabel Milano</p>
+			<div id="sources">
+				<p>Sources:</p> <!-- This is where we list our sources, for any images we used -->
+				<p>W3C validated badges: http://hestia.venturas.org/badges, licensed under CC Share Alike 3.0</p>
+				<p>All other images on this website were created by Isabel Milano</p>
+			</div>
 		</div>
 
 		<div id="badges">
@@ -82,10 +84,6 @@
 	</footer>
 
 	<div id="feedbackSuggest" onclick="openFeedback()">Feedback</div>
-
-	<script>
-	screenLoad()
-	</script>
 
 </body>
 
