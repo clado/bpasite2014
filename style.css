@@ -1,5 +1,7 @@
 body {
 	cursor: default; /* Remove feddbackSuggest, then */
+	padding: 0px;
+	margin: 0px;
 }
 
 #feedbackScreen {
@@ -50,17 +52,25 @@ body {
 	text-align: center;
 }
 
-.bottomTab {
-	
+footer {
+	background-color: #444;
 }
 
-#aboutUs {
+.tabSuggest {
+	padding: 10px;
+	border-radius: 5px;
+	background-color: #fff;
+	width: 90px;
+	display: inline-block;
+
+}
+
+.bottomTab {
+	background-color: #fff;
 	height: 0px;
 	overflow: hidden;
-}
-
-#sources {
-
+	-webkit-transition: height 2s;
+	transition: height 2s;
 }
 
 #badges {
@@ -76,10 +86,10 @@ body {
 	height: 0px;
 	overflow: hidden;
 	width: 100px;
-	color: #fff;
+	color: #0c0a0a;
 	right: 100px;
 	bottom: 0px;
-	background-color: #0c0a0a;
+	background-color: #fff;
 	text-align: center;
 	border-top-right-radius: 10px;
 	border-top-left-radius: 10px;

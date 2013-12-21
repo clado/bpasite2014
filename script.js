@@ -18,13 +18,13 @@ $(window).scroll(function () {
 //opens section at the bottom of the page, triggered by tab at the bottom of the page
 function openClose(current, other){
 	//if the selected element is already opened, it should be closed
-	if (document.getElementById(current).style.height == 'auto') {
+	if (document.getElementById(current).style.height != '0px') {
 		close(current);
 	}
-	//if another element is already open, this element must wait while it is 
+	//if another element is already open, this element must wait while it is closed
 	else if (document.getElementById(other).style.height != '0px') {
 		document.getElementById(other).style.height = '0px';
-		setTimeout(autoHeight(current), 8000); //change time to match transition time
+		setTimeout(autoHeight(current), 20000); //change time to match transition time
 	}
 	else {
 		autoHeight(current);
@@ -33,12 +33,12 @@ function openClose(current, other){
 
 //sets the element's height to zero
 function close(element){
-	document.getElementById().style.height = '0px';
+	document.getElementById(element).style.height = '0px';
 }
 
 //sets the element's height to auto
 function autoHeight(element){
-	document.getElementById(element).style.height = 'auto';
+	document.getElementById(element).style.height = '300px';
 }
 
 //opens feedback form, triggered by popup at bottom
