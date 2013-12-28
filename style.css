@@ -1,3 +1,8 @@
+/* Will be moved or deleted later */
+.placeholder img {
+	width: 100%;
+}
+
 body {
 	cursor: default; /* Manually change pointer over links then, I think */
 	padding: 0px;
@@ -76,6 +81,12 @@ footer {
 
 #aboutUs, #sources {
 	display: none;
+}
+
+#aboutUs p, #sources p {
+	margin-left: 10px;
+	margin-right: 10px;
+	font-size: 11pt;
 }
 
 #badges {

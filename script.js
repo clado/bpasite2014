@@ -7,7 +7,7 @@ $(window).scroll(function () {
 //opens section at the bottom of the page, triggered by tab at the bottom of the page
 function openClose(current, other){
 	//if the tab is already opened
-	if (document.getElementById('bottomTab').style.height == '300px'){
+	if (document.getElementById('bottomTab').style.height == '250px'){ //this number will not work on smaller screens
 		//either the element's visibilities must be switched
 		if (document.getElementById(other).style.display != 'none'){
 			document.getElementById(other).style.display = 'none';
@@ -21,7 +21,7 @@ function openClose(current, other){
 	}
 	//otherwise, the user is opening the tab for the first time
 	else {
-		document.getElementById('bottomTab').style.height = '300px';
+		document.getElementById('bottomTab').style.height = '250px'; //it will also look odd on larger screens. We need a way to calculate this dynamically
 		document.getElementById(current).style.display = 'block';
 	}
 }
