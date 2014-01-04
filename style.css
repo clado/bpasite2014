@@ -4,16 +4,19 @@ body {
 	margin: 0px;
 }
 
-#hideScroll {
-	width: 100%;
-	overflow: hidden;
+#houseBackground {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-image: url('sky.png');
+	background-repeat: repeat-x;
+	z-index: 1;
 }
 
-#main {
-	width: 100%;
-	position: relative;
-	overflow-y: scroll;
-	overflow-x: hidden;
+#houseBackground img{
+	height: 100%;
 }
 
 #house {
@@ -25,18 +28,6 @@ body {
 	display: block;
 	width: 900px; /* change later: max-width: 100%; */
 	margin: 0px auto;
-}
-
-#houseBackground {
-	position: absolute;
-	top: 0;
-	left: 0;
-	bottom: 0;
-	height: inherit;
-	width: inherit;
-	background-image: url('sky.png');
-	background-repeat: repeat-x;
-	z-index: 1;
 }
 
 #feedbackScreen {
