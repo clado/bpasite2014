@@ -1,12 +1,42 @@
-/* Will be moved or deleted later */
-#house img {
-	width: 100%;
-}
-
 body {
 	cursor: default; /* Manually change pointer over links then, I think */
 	padding: 0px;
 	margin: 0px;
+}
+
+#hideScroll {
+	width: 100%;
+	overflow: hidden;
+}
+
+#main {
+	width: 100%;
+	position: relative;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+#house {
+	position: relative;
+	z-index: 2;
+}
+
+#house img {
+	display: block;
+	width: 900px; /* change later: max-width: 100%; */
+	margin: 0px auto;
+}
+
+#houseBackground {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	height: inherit;
+	width: inherit;
+	background-image: url('sky.png');
+	background-repeat: repeat-x;
+	z-index: 1;
 }
 
 #feedbackScreen {

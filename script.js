@@ -1,12 +1,20 @@
-//onload event to set background margins
-$(document).ready(function(){
-	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
+//onload event to set margins for feedback and hideScroll
+$(document).ready(marginResize);
 
-});
+//on resize event to set margins for feedback and hideScroll
+$(document).resize(marginResize);
+
+//sets margins for feedback and hidescroll
+function marginResize(){
+	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
+	document.getElementById('hideScroll').style.width = $(window).width() + 'px';
+	document.getElementById('main').style.width = ($(window).width() + 26) + 'px';
+	document.getElementById('hideScroll').style.height = $(window).height() + 'px';
+	document.getElementById('main').style.height = $(window).height() + 26 + 'px';
+}
 
 //runs on window scroll. For moving things about the page
 $(window).scroll(function () { 
-	var scroll = $(window).scrollTop;
 	//opens feedbackSuggest tab when near the bottom of the page
 	if (($(window).scrollTop() + $(window).height()) > ($(document).height() - 25)) document.getElementById('feedbackSuggest').style.height = '30px'; 
 	else document.getElementById('feedbackSuggest').style.height = '0px';
