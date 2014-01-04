@@ -1,3 +1,9 @@
+//onload event to set background margins
+$(document).ready(function(){
+	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
+
+});
+
 //runs on window scroll. For moving things about the page
 $(window).scroll(function () { 
 	if (($(window).scrollTop() + $(window).height()) > ($(document).height() - 25)) document.getElementById('feedbackSuggest').style.height = '30px'; 
@@ -23,17 +29,19 @@ function openClose(current, other){
 	else {
 		document.getElementById('bottomTab').style.height = '250px'; //it will also look odd on larger screens. We need a way to calculate this dynamically
 		document.getElementById(current).style.display = 'block';
+		$('html, body').animate({
+    		scrollTop:($(window).scrollTop() + 250)
+    	}, 1700, null);
 	}
 }
 
 //opens feedback form, triggered by popup at bottom
 function openFeedback(){
-	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
 	document.getElementById('feedbackScreen').style.display = 'block';
 	setTimeout(function(){
 		document.getElementById('feedbackBg').style.height = '500px';
 		document.getElementById('feedbackBg').style.width = '500px';
-		document.getElementById('feedbackBg').style.margin = ((height - 500) / 2) + 'px ' + ((width - 500) / 2) + 'px';
+		document.getElementById('feedbackBg').style.margin = (($(window).height() - 500) / 2) + 'px ' + (($(window).width() - 500) / 2) + 'px';
 	}, 100);
 }
 
@@ -42,7 +50,8 @@ function closeFeedback(){
 	document.getElementById('feedbackScreen').style.display = 'none';
 	document.getElementById('feedbackBg').style.height = '0px';
 	document.getElementById('feedbackBg').style.width = '0px';
-	document.getElementById('feedbackBg').style.margin = (height / 2) + 'px ' + (width / 2) + 'px';
+	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
+
 }
 
 //validates the form and notifies user of error before sending feedback
