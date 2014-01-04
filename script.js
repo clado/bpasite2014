@@ -6,6 +6,8 @@ $(document).ready(function(){
 
 //runs on window scroll. For moving things about the page
 $(window).scroll(function () { 
+	var scroll = $(window).scrollTop;
+	//opens feedbackSuggest tab when near the bottom of the page
 	if (($(window).scrollTop() + $(window).height()) > ($(document).height() - 25)) document.getElementById('feedbackSuggest').style.height = '30px'; 
 	else document.getElementById('feedbackSuggest').style.height = '0px';
 }); 
