@@ -10,13 +10,14 @@ body {
 	left: 0;
 	bottom: 0;
 	right: 0;
-	background-image: url('sky.png');
-	background-repeat: repeat-x;
 	z-index: 1;
 }
 
-#houseBackground img{
+#sky{
 	height: 100%;
+	background-image: url('sky.png');
+	background-size: contain;
+	background-repeat: repeat-x;
 }
 
 #house {
@@ -26,8 +27,12 @@ body {
 
 #house img {
 	display: block;
-	width: 900px; /* change later: max-width: 100%; */
+	max-width: 100%;
 	margin: 0px auto;
+}
+
+#article {
+	z-index: 3;
 }
 
 #feedbackScreen {
@@ -78,32 +83,6 @@ body {
 	text-align: center;
 }
 
-footer {
-	background-color: #444;
-}
-
-.tabSuggest {
-	margin: 10px -5px 7px 20px;
-	padding: 10px;
-	border-radius: 5px;
-	background-color: #fff;
-	width: 90px;
-	display: inline-block;
-
-}
-
-#bottomTab {
-	background-color: #fff;
-	height: 0px;
-	overflow: hidden;
-	-webkit-transition: height 2s;
-	transition: height 2s;
-}
-
-#aboutUs, #sources {
-	display: none;
-}
-
 #aboutUs p, #sources p {
 	margin-left: 10px;
 	margin-right: 10px;
@@ -131,4 +110,5 @@ footer {
 	font-size: 15pt;
 	-webkit-transition: height .9s ease-in-out;
 	transition: height .8s ease-in-out;
+	z-index: 20;
 }

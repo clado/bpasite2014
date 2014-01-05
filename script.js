@@ -7,43 +7,15 @@ $(document).resize(marginResize);
 //sets margins for feedback and hidescroll
 function marginResize(){
 	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
-	document.getElementById('hideScroll').style.width = $(window).width() + 'px';
-	document.getElementById('main').style.width = ($(window).width() + 26) + 'px';
-	document.getElementById('hideScroll').style.height = $(window).height() + 'px';
-	document.getElementById('main').style.height = $(window).height() + 26 + 'px';
 }
 
 //runs on window scroll. For moving things about the page
 $(window).scroll(function () { 
 	//opens feedbackSuggest tab when near the bottom of the page
 	if (($(window).scrollTop() + $(window).height()) > ($(document).height() - 25)) document.getElementById('feedbackSuggest').style.height = '30px'; 
+
 	else document.getElementById('feedbackSuggest').style.height = '0px';
 }); 
-
-//opens section at the bottom of the page, triggered by tab at the bottom of the page
-function openClose(current, other){
-	//if the tab is already opened
-	if (document.getElementById('bottomTab').style.height == '250px'){ //this number will not work on smaller screens
-		//either the element's visibilities must be switched
-		if (document.getElementById(other).style.display != 'none'){
-			document.getElementById(other).style.display = 'none';
-			document.getElementById(current).style.display = 'block';
-		}
-		//or the user wants to close the tab
-		else {
-			document.getElementById(current).style.display = 'none';
-			document.getElementById('bottomTab').style.height = '0px';
-		}
-	}
-	//otherwise, the user is opening the tab for the first time
-	else {
-		document.getElementById('bottomTab').style.height = '250px'; //it will also look odd on larger screens. We need a way to calculate this dynamically
-		document.getElementById(current).style.display = 'block';
-		$('html, body').animate({
-    		scrollTop:($(window).scrollTop() + 250)
-    	}, 1700, null);
-	}
-}
 
 //opens feedback form, triggered by popup at bottom
 function openFeedback(){
