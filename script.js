@@ -21,7 +21,12 @@ $(window).scroll(function () {
 function openFeedback(){
 	document.getElementById('feedbackScreen').style.display = 'block';
 	setTimeout(function(){
-		document.getElementById('feedbackBg').style.height = '500px';
+		//ensures that feedback form fits in the smallest screens
+		if ($(window).height() < 500) {
+			document.getElementById('feedbackBg').style.height = $(window).height() + 'px';
+			document.getElementById('feedbackBg').style.margin = '0px ' + (($(window).width() - 500) / 2) + 'px';
+		}
+		else document.getElementById('feedbackBg').style.height = '500px';
 		document.getElementById('feedbackBg').style.width = '500px';
 		document.getElementById('feedbackBg').style.margin = (($(window).height() - 500) / 2) + 'px ' + (($(window).width() - 500) / 2) + 'px';
 	}, 100);
