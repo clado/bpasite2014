@@ -2,6 +2,7 @@ body {
 	cursor: default; /* Manually change pointer over links then, I think */
 	padding: 0px;
 	margin: 0px;
+	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
 #houseBackground {
@@ -15,24 +16,28 @@ body {
 
 #sky{
 	height: 100%;
-	background-image: url('jeez.png');
+	background-image: url('sky.png');
 	background-size: contain;
 	background-repeat: repeat-x;
 }
 
 #house {
 	position: relative;
-	z-index: 2;
-}
-
-#house img {
-	display: block;
 	max-width: 500px; /* 100%; */
+	z-index: 2;
 	margin: 0px auto;
 }
 
-#article {
-	z-index: 3;
+#house img {
+	/*position: relative;
+	display: block;
+	max-width: inherit;
+}
+
+#basement {
+	position: absolute;
+	width: inherit;
+	bottom: 0;
 }
 
 #feedbackScreen {
