@@ -1,8 +1,13 @@
 body {
-	cursor: default; /* Manually change pointer over links then, I think */
+	cursor: default; /* prevents 'I' cursor over text, which would look odd on our site */
 	padding: 0px;
 	margin: 0px;
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+div, img {
+	padding: 0px;
+	margin: 0px;
 }
 
 #houseBackground {
@@ -23,19 +28,35 @@ body {
 
 #house {
 	position: relative;
-	max-width: 500px; /* 100%; */
+	max-width: 100%;
 	z-index: 2;
 	margin: 0px auto;
 }
 
-#house img {
+#rooms {
 	max-width: inherit;
 }
 
-#basement {
+#rooms img {
+	display: block;
+	max-width: inherit;
+}
+
+#roofFloat {
+
+}
+
+#bedroomFloat {
+
+}
+
+#basementFloat {
 	position: absolute;
-	width: inherit;
+	width: 60%;
 	bottom: 0;
+	left: 50%;
+	margin-left: -30%;
+	color: #fff;
 }
 
 #feedbackScreen {
@@ -87,11 +108,12 @@ body {
 	text-align: center;
 }
 
+/*
 #aboutUs p, #sources p {
 	margin-left: 10px;
 	margin-right: 10px;
-	font-size: 11pt;
 }
+*/
 
 #badges {
 	padding: 0px;

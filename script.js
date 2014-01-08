@@ -7,9 +7,6 @@ $(window).on('resize', marginResize);
 //sets margins for feedback
 function marginResize(){
 	document.getElementById('feedbackBg').style.margin = ($(window).height() / 2) + 'px ' + ($(window).width() / 2) + 'px';
-	console.log('resize!');
-	console.log(document.getElementById('houseShell').style.width);
-	document.getElementById('house').style.width = document.getElementById('houseShell').style.width + 'px';
 }
 
 //runs on window scroll. For moving things about the page
