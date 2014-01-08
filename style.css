@@ -32,17 +32,20 @@ div, img {
 
 #house {
 	position: relative;
+	min-width: 600px;
 	max-width: 100%;
 	z-index: 2;
 	margin: 0px auto;
 }
 
 #rooms {
+	min-width: inherit;
 	max-width: inherit;
 }
 
 #rooms img {
 	display: block;
+	min-width: inherit;
 	max-width: inherit;
 }
 
@@ -52,29 +55,34 @@ article {
 }
 
 #roofFloat {
-	border: solid 1px #fff;
+	background-color: rgba(255, 255, 255, .6);
+	border-radius: 1px;
+	padding: 5px 15px;
 	top: 7%;
 	left: 55%;
-	bottom: 73%;
 	width: 30%;
+	max-height: 20%;
 	text-align: center;
 }
 
 #bedroomFloat {
-	border: solid 1px #fff;
+	background-color: rgba(255, 255, 255, .6);
+	border-radius: 1px;
+	padding: 5px 15px;
 	top: 37%;
 	left: 45%;
-	height: 15%;
+	max-height: 15%;
 	width: 50%;
 }
 
 #basementFloat {
-	width: 60%;
 	top: 75%;
-	bottom: 2%;
 	left: 50%;
+	width: 60%;
+	max-height: 23%;
 	margin-left: -30%;
 	color: #fff;
+	font-size: 90%;
 }
 
 #feedbackScreen {
@@ -155,4 +163,5 @@ article {
 	-webkit-transition: height .9s ease-in-out;
 	transition: height .8s ease-in-out;
 	z-index: 20;
+	padding-top: 5px;
 }
