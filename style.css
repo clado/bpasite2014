@@ -42,8 +42,12 @@ div, img {
 	max-width: inherit;
 }
 
-#roofFloat {
+article {
+	position: absolute;
+}
 
+#roofFloat {
+	top: 3%;
 }
 
 #bedroomFloat {
@@ -51,12 +55,13 @@ div, img {
 }
 
 #basementFloat {
-	position: absolute;
 	width: 60%;
-	bottom: 0;
+	top: 75%;
+	bottom: 2%;
 	left: 50%;
 	margin-left: -30%;
 	color: #fff;
+	overflow-y: auto;
 }
 
 #feedbackScreen {
