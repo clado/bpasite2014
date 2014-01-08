@@ -5,6 +5,10 @@ body {
 	font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+}
+
 div, img {
 	padding: 0px;
 	margin: 0px;
@@ -44,14 +48,24 @@ div, img {
 
 article {
 	position: absolute;
+	overflow-y: auto;
 }
 
 #roofFloat {
-	top: 3%;
+	border: solid 1px #fff;
+	top: 7%;
+	left: 55%;
+	bottom: 73%;
+	width: 30%;
+	text-align: center;
 }
 
 #bedroomFloat {
-
+	border: solid 1px #fff;
+	top: 37%;
+	left: 45%;
+	height: 15%;
+	width: 50%;
 }
 
 #basementFloat {
@@ -61,7 +75,6 @@ article {
 	left: 50%;
 	margin-left: -30%;
 	color: #fff;
-	overflow-y: auto;
 }
 
 #feedbackScreen {
