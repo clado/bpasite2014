@@ -7,6 +7,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-family: Didot, "Didot LT STD", "Hoefler Text", Garamond, "Times New Roman", serif;
+	text-align: center;
 }
 
 div, img {
@@ -76,13 +77,23 @@ article {
 }
 
 #basementFloat {
-	top: 75%;
+	top: 73%;
 	left: 50%;
 	width: 60%;
-	max-height: 23%;
+	max-height: 25%;
 	margin-left: -30%;
 	color: #fff;
 	font-size: 90%;
+}
+
+#basementFloat h2 {
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+#basementFloat hr {
+	width: 30%;
+	margin-top: 25px;
 }
 
 #feedbackScreen {
@@ -134,16 +145,9 @@ article {
 	text-align: center;
 }
 
-/*
-#aboutUs p, #sources p {
-	margin-left: 10px;
-	margin-right: 10px;
-}
-*/
-
 #badges {
 	padding: 0px;
-	width: 170px; /* 164px */
+	width: 170px;
 	margin: 5px auto 0px auto;
 }
 
